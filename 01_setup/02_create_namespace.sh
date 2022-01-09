@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kubectl create namespace $RASAX_NS
-kubectl create namespace $EFK_NS
+k create namespace $RASAX_NS
+k create namespace $EFK_NS
