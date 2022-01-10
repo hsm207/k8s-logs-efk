@@ -1,0 +1,9 @@
+rbac:
+  create: false
+
+config:
+  outputs: |
+    [OUTPUT]
+        Name            stdout        
+        Format          json_lines
+        Match           kube.*
