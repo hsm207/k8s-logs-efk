@@ -7,6 +7,10 @@ image:
 config:
   outputs: |
     [OUTPUT]
-        Name            stdout        
-        Format          json_lines
+        Name            es
         Match           kube.*
+        Host            elasticsearch-master
+        Index           test
+        Generate_ID     On
+        Trace_Error     On
+        Replace_Dots    On
