@@ -6,11 +6,26 @@ image:
   
 config:
   outputs: |
+    [INPUT]
+        Name tail
+        Path /var/log/containers/*.log
+        multiline.parser docker, cri
+        Tag kube.*
+        Skip_Long_Lines On
+        Buffer_Chunk_Size 512m
+        Buffer_Max_Size 512m
+        Mem_Buf_Limit   1g
+        Ignore_Older 5m
+        
+        
     [OUTPUT]
         Name            es
         Match           kube.*
         Host            elasticsearch-master
-        Index           test
+        Index           fluent-bit
+        Logstash_Format On
         Generate_ID     On
         Trace_Error     On
         Replace_Dots    On
+        Buffer_Size     False
+        Retry_Limit     1
