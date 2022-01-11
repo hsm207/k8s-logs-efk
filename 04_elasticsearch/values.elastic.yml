@@ -29,7 +29,7 @@ volumeClaimTemplate:
   storageClassName: "microk8s-hostpath"
   resources:
     requests:
-      storage: 100M
+      storage: 30Gi
 
 # Default config is 3 nodes/pods
 replicas: 1
