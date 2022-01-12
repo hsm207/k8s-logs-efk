@@ -23,6 +23,7 @@ config:
         Match           kube.*
         Host            elasticsearch-master
         Index           fluent-bit
+        Logstash_Format Off
         Generate_ID     On
         Trace_Error     On
         Replace_Dots    On
