@@ -8,6 +8,7 @@ helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
 helm --kubeconfig $KUBECONFIG install \
     $RASAX_NS \
     --namespace $RASAX_NS \
+    --version 2.11.0 \
     --values values.community.yml \
     --values values.ingress.yml \
     rasa-x/rasa-x && \
