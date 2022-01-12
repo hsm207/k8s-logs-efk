@@ -12,3 +12,4 @@ helm --kubeconfig $KUBECONFIG install \
     --values values.community.yml \
     --values values.ingress.yml \
     rasa-x/rasa-x && \
+k apply -f custom_ingress.yml
